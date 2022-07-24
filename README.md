@@ -21,6 +21,7 @@ The rest required packages may not necessarily have to match exactly.
 `tqdm==4.64.0`  
 
 ## Command lines
+Please refer to the following specifications to train different flow models on different in-distribution dataset.
 ### Training simple models:  
 `python3 main.py  --dataset fmnist  --lr 0.00001  --ind fmnist  --estimator GLOW --Train --epochs 201 --K 3 --num_blocks 2  --hidden_size 64  --batch_size 64`  
 `python3 main.py  --dataset fmnist  --lr 0.000001  --ind fmnist --estimator REALNVP  --Train  --epochs 51   --num_blocks 1  --hidden_size 512`  
