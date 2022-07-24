@@ -36,6 +36,9 @@ Please refer to the following specifications to train different flow models on d
 ### Training complex models:
 `python3 main.py  --dataset cifar10  --lr 0.001  --ind cifar10  --estimator GLOW --Train --epochs 201 --K 16 --num_blocks 3 --hidden_size 128  --batch_size 64`    
 `python3 main.py  --dataset celeba  --lr 0.00001  --ind celeba  --estimator REALNVP  --Train  --epochs 201  --num_blocks 16  --hidden_size 512  --log_step 10`  
+### Training on EEG/ECG:
+`python3 main.py --dataset eeg  --lr 0.00001  --ind eeg  --estimator REALNVP  --Train  --epochs 30  --seg_len 10`  
+`python3 main.py --dataset ecg  --lr 0.00001  --ind ecg  --estimator REALNVP  --Train  --epochs 200  --seg_len 10`  
 
 ### Testing
 Our main results are all based on simple flow models. To reproduce our main results, run the following example commands for CIFAR10/SVHN pairs with batch size = 10 (for other dataset pairs you can simply parse different dataset names to --dataset and --ind):  
@@ -47,6 +50,10 @@ Our main results are all based on simple flow models. To reproduce our main resu
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --kst_rule  --batch_size 10  --num_project 200`  
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --klod  --batch_size 10`  
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --typical  --batch_size 10`
+### Table 10 (time-series data)
+`python3 main.py --dataset ecg  --lr 0.00001  --ind eeg  --estimator REALNVP  --Test  --kst_rule  --seg_len 10  --batch_size 10  --num_project 50`  
+`python3 main.py --dataset ecg  --lr 0.00001  --ind eeg  --estimator REALNVP  --Test  --klod  --seg_len 10  --batch_size 10`  
+`python3 main.py --dataset ecg  --lr 0.00001  --ind eeg  --estimator REALNVP  --Test  --typical  --seg_len 10  --batch_size 10`    
 
 ### Generating images
 If you set --log_step 10 (or other steps for saving models), you can generate images by loading differently trained models as follows (the default num_epochs is -1, which means the last training epoch):  
