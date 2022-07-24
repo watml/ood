@@ -46,8 +46,14 @@ To reproduce our main results, run the following example commands for CIFAR10/SV
 #### Table 6
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --kst_rule  --batch_size 10  --num_project 200`  
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --klod  --batch_size 10`  
-`python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --typical  --batch_size 10`  
+`python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --typical  --batch_size 10`
 
+### Generating images
+If you set --log_step 10 (or other steps for saving models), you can generate images by loading differently trained models as follows:
+`python3 generateImgs.py --dataset celeba  --ind celeba --estimator REALNVP  --num_blocks 16  --hidden_size 512  --num_epochs 10`  
+`python3 generateImgs.py --dataset celeba  --ind celeba --estimator REALNVP  --num_blocks 16  --hidden_size 512  --num_epochs 100`  
+`python3 generateImgs.py --dataset celeba  --ind celeba --estimator REALNVP  --num_blocks 16  --hidden_size 512  --num_epochs 150`  
+`python3 generateImgs.py --dataset celeba  --ind celeba --estimator REALNVP  --num_blocks 16  --hidden_size 512  --num_epochs 200`  
 
 ## Reference
 The PyTorch implementation of models used in this project is based on existing public code repo:
