@@ -11,10 +11,10 @@ This project is implemented based on Python 3.6, PyTorch 1.1.0, and torchvision 
 The rest required packages may not necessarily have to match exactly.  
 
 `matplotlib==3.3.4`  
-'mne==0.23.4'
-> numpy==1.16.4
-> pandas==1.1.5
-> scikit_learn==0.24.2
-> scipy==1.5.4
-> seaborn==0.11.1
-> tqdm==4.64.0
+`mne==0.23.4`  
+`numpy==1.16.4`  
+`pandas==1.1.5`
+`scikit_learn==0.24.2`
+`scipy==1.5.4`
+`seaborn==0.11.1`
+`tqdm==4.64.0`
