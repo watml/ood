@@ -38,7 +38,7 @@ Please refer to the following specifications to train different flow models on d
 `python3 main.py  --dataset celeba  --lr 0.00001  --ind celeba  --estimator REALNVP  --Train  --epochs 201  --num_blocks 16  --hidden_size 512  --log_step 10`  
 
 ### Testing
-To reproduce our main results, run the following example commands for CIFAR10/SVHN pairs with batch size = 10 (for other dataset pairs you can simply parse different dataset names to --dataset and --ind):  
+Our main results are all based on simple flow models. To reproduce our main results, run the following example commands for CIFAR10/SVHN pairs with batch size = 10 (for other dataset pairs you can simply parse different dataset names to --dataset and --ind):  
 #### Table 1 and 5
 `python3 main.py --dataset svhn  --ind cifar10  --estimator REALNVP  --Test  --num_blocks 1 --hidden_size 2048  --kst_rule  --batch_size 10  --num_project 50`  
 `python3 main.py --dataset svhn  --ind cifar10  --estimator REALNVP  --Test  --num_blocks 1 --hidden_size 2048  --klod  --batch_size 10`  
