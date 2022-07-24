@@ -50,7 +50,7 @@ Our main results are all based on simple flow models. To reproduce our main resu
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --kst_rule  --batch_size 10  --num_project 200`  
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --klod  --batch_size 10`  
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --typical  --batch_size 10`
-### Table 10 (time-series data)
+#### Table 10 (time-series data)
 `python3 main.py --dataset ecg  --lr 0.00001  --ind eeg  --estimator REALNVP  --Test  --kst_rule  --seg_len 10  --batch_size 10  --num_project 50`  
 `python3 main.py --dataset ecg  --lr 0.00001  --ind eeg  --estimator REALNVP  --Test  --klod  --seg_len 10  --batch_size 10`  
 `python3 main.py --dataset ecg  --lr 0.00001  --ind eeg  --estimator REALNVP  --Test  --typical  --seg_len 10  --batch_size 10`    
