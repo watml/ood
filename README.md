@@ -38,18 +38,18 @@ Please refer to the following specifications to train different flow models on d
 `python3 main.py  --dataset celeba  --lr 0.00001  --ind celeba  --estimator REALNVP  --Train  --epochs 201  --num_blocks 16  --hidden_size 512  --log_step 10`  
 
 ### Testing
-To reproduce our main results, run the following example commands for CIFAR10/SVHN pairs with batch size = 10 (for other dataset pairs you can simply parse different dataset names to --dataset and --ind):
+To reproduce our main results, run the following example commands for CIFAR10/SVHN pairs with batch size = 10 (for other dataset pairs you can simply parse different dataset names to --dataset and --ind):  
 #### Table 1 and 5
 `python3 main.py --dataset svhn  --ind cifar10  --estimator REALNVP  --Test  --num_blocks 1 --hidden_size 2048  --kst_rule  --batch_size 10  --num_project 50`  
 `python3 main.py --dataset svhn  --ind cifar10  --estimator REALNVP  --Test  --num_blocks 1 --hidden_size 2048  --klod  --batch_size 10`  
 `python3 main.py --dataset svhn  --ind cifar10  --estimator REALNVP  --Test  --num_blocks 1 --hidden_size 2048  --typical  --batch_size 10`  
-#### Table 6
+#### Table 6  
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --kst_rule  --batch_size 10  --num_project 200`  
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --klod  --batch_size 10`  
 `python3 main.py  --dataset svhn  --ind cifar10  --estimator GLOW --Test  --K 3 --num_blocks 3 --hidden_size 64  --typical  --batch_size 10`
 
 ### Generating images
-If you set --log_step 10 (or other steps for saving models), you can generate images by loading differently trained models as follows:
+If you set --log_step 10 (or other steps for saving models), you can generate images by loading differently trained models as follows (the default num_epochs is -1, which means the last training epoch):  
 `python3 generateImgs.py --dataset celeba  --ind celeba --estimator REALNVP  --num_blocks 16  --hidden_size 512  --num_epochs 10`  
 `python3 generateImgs.py --dataset celeba  --ind celeba --estimator REALNVP  --num_blocks 16  --hidden_size 512  --num_epochs 100`  
 `python3 generateImgs.py --dataset celeba  --ind celeba --estimator REALNVP  --num_blocks 16  --hidden_size 512  --num_epochs 150`  
