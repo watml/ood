@@ -3,9 +3,9 @@ This code repo corresponds to the ICLR 2022 paper: [Revisiting flow generative m
 
 ## Datasets
 All datasets can be downloaded by torchvision.dataset without extra effort, except the following three:
-+ CelebA. Please download the dataset as indicated in https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html. Put all annotation files as well as img_align_celeba.zip (~ 1.34 GB) under the folder /data/CELEBA/celeba (which is the default path), then unzip img_align_celeba.zip. If you already have the dataset, you can simply change the path to your exisiting dataset by modifiying the path in the function **setDataset** in main.py.  
-+ LSUN. Please download the test set (test_lmdb.zip, ~172 MB) as instructed by https://github.com/fyu/lsun. Put it under the default path: /data/LSUN, then unzip it.  
-+ EEG/ECG. Please download slp03.edf, slp04.edf, slp14.edf, slp16.edf from MIT-BIH Polysomnographic Database, and put them under path /data/PSG. One way to do so is going to https://archive.physionet.org/cgi-bin/atm/ATM, then do the following steps: Input -> Database -> *MIT-BIH Polysomnographic Database (slpdb)*,  Output -> Length -> *to end*, Toolbox -> *Export signals as EDF*. Finally you can download the EDF file below.   
++ CelebA. Please download the dataset as indicated in https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html. Put all annotation files as well as **img_align_celeba.zip** (~ 1.34 GB) under the folder **data/CELEBA/celeba** (which is the default path), then unzip **img_align_celeba.zip**. If you already have the dataset, you can simply change the path to your exisiting dataset by modifiying the path in the function **setDataset** in main.py.  
++ LSUN. Please download the test set (**test_lmdb.zip**, ~172 MB) as instructed by https://github.com/fyu/lsun. Put it under the default path: **data/LSUN**, then unzip it.  
++ EEG/ECG. Please download **slp03.edf, slp04.edf, slp14.edf, slp16.edf** from MIT-BIH Polysomnographic Database, and put them under path **data/PSG**. One way to do so is going to https://archive.physionet.org/cgi-bin/atm/ATM, then do the following steps: Input -> Database -> *MIT-BIH Polysomnographic Database (slpdb)*,  Output -> Length -> *to end*, Toolbox -> *Export signals as EDF*. Finally you can download the EDF file below.   
 
 ## Environments
 This project is implemented based on Python 3.6, PyTorch 1.1.0, and torchvision 0.3.0.
