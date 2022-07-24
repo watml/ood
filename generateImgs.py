@@ -18,7 +18,6 @@ import matplotlib.pyplot as plt
 
 # random seed
 from utils import set_random_seed
-# helper class for training/testing/plotting
 from result_helpers.ood_trainer import OODTrainer
 # path
 from utils import create_checkpoints_dir
@@ -48,10 +47,9 @@ def setDataset(ds_name, n_class, ind, train_intra, seg_len):
     elif ds_name == 'cifar100':
         dataset = CIFAR100(path='data/CIFAR100', n_class=n_class, InD=ind)
     elif ds_name == 'celeba':
-        # dataset = CELEBA(path='data/CELEBA', InD=ind) # original
-        dataset = CELEBA(path='../../mtq/MTQ/data/CELEBA', InD=ind)
+        dataset = CELEBA(path='data/CELEBA', InD=ind) 
     elif ds_name == 'lsun':
-        dataset = LSUN(path='../../mtq/MTQ/data/LSUN', InD=ind)
+        dataset = LSUN(path='data/LSUN', InD=ind)
     elif ds_name in ['random', 'const']:
         dataset = FAKE(ds_name, ind)
     elif 'gaussian' in ds_name:
